@@ -1,0 +1,5 @@
+<?php
+/*
+Comentário de bloco
+*/
+?>
