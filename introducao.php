@@ -1,7 +1,7 @@
 <?php //O script PHP deve sempre começar com a tag <?php e terminar com a tag ?>
 <?php
 /*
-Todo conteúdo deste arquivo foi tirado ou adaptado de php.net
+** Todo conteúdo deste arquivo foi tirado ou adaptado de php.net **
 */
 
 ini_set("display_errors", 1);//exibe erros
