@@ -68,9 +68,9 @@ class IMCFilha extends IMC{
 }
 
 $objIMCFilha = new IMCFilha;
-$objIMCFilha->__set('peso',90);
+$objIMCFilha->peso = 90;
 echo "<br>O peso &eacute;: ".
-		$objIMCFilha->__get('peso')."<br>";
+		$objIMCFilha->peso."<br>";
 
 /*
 $objIMC = new IMC;
