@@ -1,0 +1,10 @@
+1º Parte
+	Arquitetura MVC
+	index
+	model db
+	main controller
+	pagina principal sem post
+2º Parte
+	Mostrar Post na Home
+3º Parte
+	ADM
