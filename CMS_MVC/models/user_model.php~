@@ -18,6 +18,7 @@ class UserModel {
 		$objStmt->execute();
 		$qtdLinhas = $objStmt->rowCount();
 		
+
 		if($qtdLinhas > 0){
 			return true;
 		}else{

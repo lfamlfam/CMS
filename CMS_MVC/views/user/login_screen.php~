@@ -3,13 +3,7 @@
 		<title>ADM do Meu CMS</title>
 	</head>
 	<body>
-		<br><br>
-		<?php
-		if(isset($msg_erro)){
-			echo "<center><font color='red'>$msg_erro</font></center>";
-		}
-		?>
-		<br><br>
+		<br><br><br><br>
 		<center>
 			<form method='post'>
 				<table>
