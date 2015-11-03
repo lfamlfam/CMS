@@ -6,5 +6,9 @@ class UserView {
 	public function showLoginScreen($msg_erro = false){
 		include('user/login_screen.php');
 	}
+	public function showHomeAdmin(){
+		include('user/home_admin_header.php');
+		include('user/home_admin_footer.php');
+	}
 }
 ?>

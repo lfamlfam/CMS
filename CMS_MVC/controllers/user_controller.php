@@ -11,16 +11,26 @@ class UserController extends UserModel {
 	}
 
 	public function login($get, $post){
-		if(empty($post['login']) && empty($post['senha'])){
+
+		if((empty($post['login']) && empty($post['senha'])) && !isset($_SESSION['login'])){
 			$this->objUserView->showLoginScreen();
 		}else{
-			if($this->verificaLoginSenha($post['login'], $post['senha'])){
-				echo "Bem-vindo";
+
+			if(isset($_SESSION['login'])){
+				$this->objUserView->showHomeAdmin();
+			}elseif($this->verificaLoginSenha($post['login'], $post['senha'])){
+				$_SESSION['login'] = $post['login'];
+				$this->objUserView->showHomeAdmin();
 			}else{
 				$msg_erro = 'Suas credenciais n&atilde;o conferem';
 				$this->objUserView->showLoginScreen($msg_erro);
 			}
 		}
+	}
+
+	public function logout(){
+		session_destroy();
+		$this->objUserView->showLoginScreen();
 	}
 
 	public function __destruct(){

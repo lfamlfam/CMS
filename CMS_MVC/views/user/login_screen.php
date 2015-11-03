@@ -11,7 +11,7 @@
 		?>
 		<br><br>
 		<center>
-			<form method='post'>
+			<form method='post' action='index.php?controller=User&action=login'>
 				<table>
 					<tr>
 						<td>Login </td><td><input type='text' name='login'></td>

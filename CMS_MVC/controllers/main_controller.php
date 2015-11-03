@@ -5,12 +5,19 @@ ini_set('error_reporting', E_ALL);
 class MainController {
 
 	private $controllers_actions = array(	'Main' => array('show' => true),
-						'User' => array('login' => true));	
+						'User' => array('login' => true,
+								'logout' => true),
+						'Post' => array('listAllPosts' => true,
+								'addPost' => true,
+								'delPost' => true,
+								'editPost' => true));	
 	private $objController;
 	private $controller;
 	private $action;
 	
 	public function __construct($controller, $action){
+
+		session_start();
 
 		if((!$controller && !$action) || !isset($this->controllers_actions[$controller][$action])){
 			$this->controller = 'Main';
