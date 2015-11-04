@@ -57,6 +57,13 @@ class PostController extends PostModel {
 		}
 	}
 
+	public function delPost($get, $post){
+		if(is_numeric($get['idPost'])){
+			$this->removePost($get['idPost']);
+		}
+		$posts = $this->getPostList();
+		$this->objPostView->listAllPosts($posts);	
+	}
 
 	public function __destruct(){
 		parent::__destruct();

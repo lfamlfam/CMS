@@ -77,6 +77,18 @@ abstract class PostModel {
 		}
 	}
 
+	public function removePost($id){
+		$objStmt = $this->objDB->prepare(	'DELETE FROM 
+							tb_post 
+							WHERE   
+							id = ?');
+		if($objStmt->execute(array($id))){
+			return true;
+		}else{
+			return false;
+		}		
+	}
+
 	public function __destruct(){
 		unset($this->objDB);
 	}
