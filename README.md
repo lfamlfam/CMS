@@ -1,4 +1,5 @@
 # CMS
+<pre>
 Exemplos de códigos da disciplina de CMS do curso de TSI do Centro Universitário SENAC
 
 Tabelas do Banco de Dados
@@ -21,4 +22,4 @@ mysql> desc tb_usuario;
 | login | varchar(255) | YES  |     | NULL    |                |
 | senha | varchar(100) | YES  |     | NULL    |                |
 +-------+--------------+------+-----+---------+----------------+
-
+</pre>
